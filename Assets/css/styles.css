@@ -5,3 +5,14 @@
     width: 24px;
     height: 24px;
 }
+
+/* Tailwind doesn't include this by default */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE & Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  
