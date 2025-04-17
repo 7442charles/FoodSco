@@ -1,11 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodSco</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FoodSco</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="Assets/css/styles.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FD5200',
+            darkbg: '#030C14',
+          },
+        }
+      }
+    };
+  </script>
+
 </head>
-<body>
+<body class="bg-white dark:bg-darkbg text-black dark:text-white transition-colors duration-300">
+
+  <!-- Navbar -->
+  <nav class="w-full px-4 sm:px-8 py-4 flex items-center justify-between border-b border-gray-200 dark:border-gray-700">
     
+    <!-- Left: Logo -->
+    <div class="flex-1 flex justify-start">
+      <a href="#" class="text-xl font-bold tracking-wide">FoodSco</a>
+    </div>
+
+    <!-- Center: Nav Links -->
+    <div class="hidden md:flex flex-1 justify-center space-x-6 text-sm font-medium">
+      <a href="#" class="hover:text-primary active-link">Home</a>
+      <a href="#" class="hover:text-primary">About</a>
+      <a href="#" class="hover:text-primary">Featured</a>
+      <a href="#" class="hover:text-primary">Menu</a>
+    </div>
+
+    <!-- Right: Icons -->
+    <div class="flex-1 flex justify-end items-center space-x-4">
+      <button aria-label="Search">
+        <!-- Search Icon -->
+        <img 
+        src="assets/images/search_light.svg" 
+        data-light="assets/images/search_light.svg" 
+        data-dark="assets/images/search_dark.svg" 
+        alt="Search" 
+        class="icon" />
+      </button>
+      <button aria-label="Account">
+        <!-- Account Icon -->
+        <img 
+        src="assets/images/profile_light.svg" 
+        data-light="assets/images/profile_light.svg" 
+        data-dark="assets/images/profile_dark.svg" 
+        alt="Account" 
+        class="icon" />
+      </button>
+      <button aria-label="Basket">
+       <!-- Basket Icon -->
+        <img 
+        src="assets/images/basket_light.svg" 
+        data-light="assets/images/basket_light.svg" 
+        data-dark="assets/images/basket_dark.svg" 
+        alt="Basket" 
+        class="icon" />
+      </button>
+      <button aria-label="Toggle Theme" id="themeToggle">
+        <!-- Theme Toggle Icon -->
+        <img 
+        id="themeToggle" 
+        src="assets/images/moon.svg" 
+        data-light="assets/images/moon.svg" 
+        data-dark="assets/images/sun.svg" 
+        alt="Toggle Theme" 
+        class="icon cursor-pointer" />
+      </button>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden flex items-center">
+      <button id="mobileMenuBtn" class="text-2xl">☰</button>
+    </div>
+  </nav>
+
+  <!-- Optional Mobile Nav -->
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2 text-sm font-medium">
+    <a href="#" class="block hover:text-primary active-link">Home</a>
+    <a href="#" class="block hover:text-primary">About</a>
+    <a href="#" class="block hover:text-primary">Featured</a>
+    <a href="#" class="block hover:text-primary">Menu</a>
+  </div>
+
+ <script src="Assets/js/main.js"></script>
+
 </body>
 </html>
