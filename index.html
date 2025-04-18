@@ -135,141 +135,174 @@
     <a href="#" class="block hover:text-primary">Menu</a>
   </div>
 
-  <!-- Hero section -->
-<section class="w-full h-screen flex flex-col justify-between px-6 md:px-16 py-8 gap-8">
+    <!-- Hero section -->
+    <section class="w-full min-h-screen flex flex-col justify-between px-6 md:px-16 py-8 gap-8">
 
-  <!-- Top: Main Hero Content (Left + Right) -->
-  <div class="flex flex-col md:flex-row gap-8 flex-grow">
-    
-    <!-- Left Side -->
-    <div class="w-full md:w-1/2 flex flex-col justify-center gap-6">
+
+    <!-- Top: Main Hero Content (Left + Right) -->
+    <div class="flex flex-col md:flex-row gap-8 flex-grow">
       
-      <!-- 1. Pill Button -->
-      <div>
-        <span class="bg-[#FF7433] text-white text-sm px-4 py-2 rounded-full font-semibold select-none opacity-70 cursor-default">
-          Taste. Savor. Enjoy.
-        </span>
+      <!-- Left Side -->
+      <div class="w-full md:w-1/2 flex flex-col justify-center gap-6">
+        
+        <!-- 1. Pill Button -->
+        <div>
+          <span class="bg-[#FF7433] text-white text-sm px-4 py-2 rounded-full font-semibold select-none opacity-70 cursor-default">
+            Taste. Savor. Enjoy.
+          </span>
+        </div>
+
+        <!-- 2. Headings -->
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          Experience the <span class="text-[#FF7433]">Goodness</span> <br> and the <span class="text-[#FF7433]">Taste!!</span>
+        </h1>
+
+        <!-- 3. Paragraph -->
+        <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 max-w-xl">
+          Indulge in our culinary delights, crafted with the finest ingredients to tantalize your taste buds. 
+          Join us today and discover a new favorite dish that will keep you coming back for more.
+        </p>
+
+        <!-- 4. CTA Buttons -->
+        <div class="flex gap-4 flex-wrap">
+          <button class="bg-[#FF7433] text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform">
+            Order Now
+          </button>
+          <button class="border border-[#FF7433] text-[#FF7433] px-6 py-3 rounded-full font-semibold hover:bg-[#FF7433] hover:text-white transition-all">
+            View Menu
+          </button>
+        </div>
+
+        <!-- 👇 Mobile Only: Hero Image -->
+        <div class="block md:hidden flex items-center justify-center">
+          <img 
+            src="Assets/images/hero_image_right.png" 
+            alt="Delicious food" 
+            class="mt-6 max-h-[300px] object-cover rounded-xl transition-all duration-300"
+          />
+        </div>
+
+        <!-- 5. Trusted Customers -->
+        <div class="flex gap-6 mt-6 flex-wrap">
+          <div class="flex items-center gap-2">
+            <img src="Assets/images/trusted_customers.png" alt="Customer Icon" class="w-12 h-10" />
+            <span class="text-sm font-medium text-gray-800 dark:text-gray-200">20,000+ <br> trusted customers</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="Assets/images/menu.png" alt="Menu Icon" class="w-12 h-10" />
+            <span class="text-sm font-medium text-gray-800 dark:text-gray-200">500+ <br> Menus</span>
+          </div>
+        </div>
       </div>
 
-      <!-- 2. Headings -->
-      <h1 class="text-4xl md:text-5xl font-bold leading-tight">
-        Experience the <span class="text-[#FF7433]">Goodness</span>
-      </h1>
-      <h1 class="text-4xl md:text-5xl font-bold leading-tight">
-        and the <span class="text-[#FF7433]">Taste!!</span>
-      </h1>
+      <!-- 👇 Desktop Only: Hero Image -->
+      <div class="hidden md:flex w-full md:w-1/2 items-center justify-center">
+        <img 
+          id="main-hero-image"
+          src="Assets/images/hero_image_right.png" 
+          alt="Delicious food" 
+          class="max-h-full max-w-full object-cover rounded-xl transition-all duration-300"
+        />
+      </div>
+    </div>
 
-      <!-- 3. Paragraph -->
-      <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 max-w-xl">
-        Indulge in our culinary delights, crafted with the finest ingredients to tantalize your taste buds. 
-        Join us today and discover a new favorite dish that will keep you coming back for more.
-      </p>
+    <!-- Bottom: Image Controller + Social Icons Row -->
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6 w-full p-4 ">
 
-      <!-- 4. CTA Buttons -->
-      <div class="flex gap-4 flex-wrap">
+      <!-- Left: Image Controller with themed background and arrows -->
+        <div class="flex items-center justify-between gap-2 px-4 py-4 rounded-xl overflow-x-auto md:overflow-visible scrollbar-hide dark:bg-[#010B13]" style="background: rgba(253, 82, 0, 0.2);">
+          
+          <!-- Previous Arrow -->
+          <button onclick="scrollThumbnails('prev')" class="shrink-0 hover:scale-110 transition-transform">
+            <img src="Assets/images/previuos.svg" alt="Previous" class="w-6 h-6" />
+          </button>
+
+          <!-- Thumbnails Scroll Area -->
+          <div class="flex items-center gap-4 overflow-x-auto scrollbar-hide max-w-[80vw] md:max-w-none">
+            <!-- Thumbnail 1 -->
+            <img src="Assets/images/hero_image_right.png" alt="Thumbnail 1" class="w-16 h-16 object-cover rounded-md cursor-pointer transition-transform" /> 
+
+            <!-- Active Thumbnail 2 -->
+            <img src="Assets/images/Delicious_Veggie_Packed_Pasta.png" alt="Thumbnail 2" class="w-20 h-20 object-cover rounded-md border-4 border-[#FF4733] cursor-pointer"/> 
+
+            <!-- Thumbnail 3 -->
+            <img src="Assets/images/Bolognese_Sauce.png" alt="Thumbnail 3" class="w-16 h-16 object-cover rounded-md cursor-pointer transition-transform"/> 
+          </div>
+
+          <!-- Next Arrow -->
+          <button onclick="scrollThumbnails('next')" class="shrink-0 hover:scale-110 transition-transform">
+            <img src="Assets/images/next.svg" alt="Next" class="w-6 h-6" />
+          </button>
+        </div>
+
+
+      <!-- Socials -->
+      <div class="flex gap-6">
+        <!-- Pinterest -->
+        <a href="#" target="_blank">
+          <!-- Light Theme Icon -->
+          <img src="Assets/images/pintrest.svg" alt="Pinterest" class="w-6 h-6 block dark:hidden" />
+          <!-- Dark Theme Icon -->
+          <img src="Assets/images/pintrest_dark.svg" alt="Pinterest Dark" class="w-6 h-6 hidden dark:block" />
+        </a>
+      
+        <!-- Instagram -->
+        <a href="#" target="_blank">
+          <img src="Assets/images/instagram.svg" alt="Instagram" class="w-6 h-6 block dark:hidden" />
+          <img src="Assets/images/instagram_dark.svg" alt="Instagram Dark" class="w-6 h-6 hidden dark:block" />
+        </a>
+      
+        <!-- Facebook -->
+        <a href="#" target="_blank">
+          <img src="Assets/images/facebook.svg" alt="Facebook" class="w-6 h-6 block dark:hidden" />
+          <img src="Assets/images/facebook_dark.svg" alt="Facebook Dark" class="w-6 h-6 hidden dark:block" />
+        </a>
+      </div>
+      
+    </div>
+
+  </section>
+
+  <!-- About Us Section -->
+  <section class="w-full mt-20 px-6 md:px-16 py-16 bg-white dark:bg-[#010B13]">
+    <div class="flex flex-col md:flex-row gap-10 items-center justify-between">
+      
+      <!-- Left: Text Content -->
+      <div class="w-full md:w-1/2 space-y-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-black dark:text-white">About Us</h2>
+        
+        <p class="text-black dark:text-white leading-relaxed">
+          At Foodsco, we are passionate about bringing you the finest culinary experiences.
+          Our mission is to deliver fresh, high-quality ingredients and delectable dishes right to your doorstep.
+          Whether you're craving a classic favorite or eager to try something new, Foodsco is here to satisfy your
+          taste buds with convenience and excellence. Our team of culinary experts and dedicated staff work tirelessly
+          to ensure that every meal meets the highest standards of taste and quality.
+        </p>
+
         <button class="bg-[#FF7433] text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform">
-          Order Now
-        </button>
-        <button class="border border-[#FF7433] text-[#FF7433] px-6 py-3 rounded-full font-semibold hover:bg-[#FF7433] hover:text-white transition-all">
-          View Menu
+          Learn More
         </button>
       </div>
 
-      <!-- 5. Trusted Customers -->
-      <div class="flex gap-6 mt-6 flex-wrap">
-        <div class="flex items-center gap-2">
-          <img src="Assets/images/trusted_customers.png" alt="Customer Icon" class="w-12 h-10" />
-          <span class="text-sm font-medium text-gray-800 dark:text-gray-200">20,000+ <br> trusted customers</span>
+      <!-- Right: Image Grid -->
+      <div class="w-full md:w-1/2 h-[500px] flex flex-col md:flex-row gap-4">
+        
+        <!-- Left Side of Right: Two Vertical Images -->
+        <div class="flex flex-col gap-4 w-full md:w-1/2">
+          <img src="Assets/images/Spaghetti_Meatballs.png" alt="About Image 1" class="w-full h-1/2 object-cover rounded-xl" />
+          <img src="Assets/images/Jollof_Rice.png" alt="About Image 2" class="w-full h-1/2 object-cover rounded-xl" />
         </div>
-        <div class="flex items-center gap-2">
-          <img src="Assets/images/menu.png" alt="Menu Icon" class="w-12 h-10" />
-          <span class="text-sm font-medium text-gray-800 dark:text-gray-200">500+ <br> Menus</span>
+
+        <!-- Right Side of Right: Tall Image -->
+        <div class="w-full md:w-1/2 h-full">
+          <img src="Assets/images/Mixed_Platter.png" alt="About Image 3" class="w-full h-full object-cover rounded-xl" />
         </div>
+
       </div>
+
     </div>
+  </section>
 
-    <!-- Right Side: Hero Image -->
-    <div class="w-full md:w-1/2 flex items-center justify-center">
-      <img 
-        id="main-hero-image"
-        src="Assets/images/hero_image_right.png" 
-        alt="Delicious food" 
-        class="max-h-full max-w-full object-cover rounded-xl shadow-lg transition-all duration-300"
-      />
-    </div>
-  </div>
-
-  <!-- Bottom: Image Controller + Social Icons Row -->
-<div class="flex flex-col md:flex-row justify-between items-center gap-6 w-full p-4 ">
-
-  <!-- Left: Image Controller with themed background and arrows -->
-  <div 
-    class="flex items-center gap-4 px-6 py-4 rounded-xl overflow-x-auto scrollbar-hide"
-    style="background: rgba(253, 82, 0, 0.2);"
-    class="dark:bg-[#010B13]">
-    <!-- Previous Arrow -->
-    <button onclick="scrollThumbnails('prev')" class="hover:scale-110 transition-transform">
-      <img src="Assets/images/previuos.svg" alt="Previous" class="w-6 h-6" />
-    </button>
-
-    <!-- Thumbnails Row -->
-    <div class="flex items-center gap-4 overflow-x-auto">
-      <!-- Thumbnail 1 -->
-      <img src="Assets/images/hero_image_right.png" 
-           alt="Thumbnail 1"
-           class="w-16 h-16 object-cover rounded-md cursor-pointer  transition-transform"
-            /> 
-
-      <!-- Active Thumbnail 2 -->
-      <img src="Assets/images/Delicious_Veggie_Packed_Pasta.png" 
-           alt="Thumbnail 2"
-           class="w-20 h-20 object-cover rounded-md border-4 border-[#FF4733] cursor-pointer"
-            /> 
-
-      <!-- Thumbnail 3 -->
-      <img src="Assets/images/Bolognese_Sauce.png" 
-           alt="Thumbnail 3"
-           class="w-16 h-16 object-cover rounded-md cursor-pointer  transition-transform"
-            /> 
-    </div>
-
-    <!-- Next Arrow -->
-    <button onclick="scrollThumbnails('next')" class="hover:scale-110 transition-transform">
-      <img src="Assets/images/next.svg" alt="Next" class="w-6 h-6" />
-    </button>
-  </div>
-
-  <div class="flex gap-6">
-    <!-- Pinterest -->
-    <a href="#" target="_blank">
-      <!-- Light Theme Icon -->
-      <img src="Assets/images/pintrest.svg" alt="Pinterest" class="w-6 h-6 block dark:hidden" />
-      <!-- Dark Theme Icon -->
-      <img src="Assets/images/pintrest_dark.svg" alt="Pinterest Dark" class="w-6 h-6 hidden dark:block" />
-    </a>
-  
-    <!-- Instagram -->
-    <a href="#" target="_blank">
-      <img src="Assets/images/instagram.svg" alt="Instagram" class="w-6 h-6 block dark:hidden" />
-      <img src="Assets/images/instagram_dark.svg" alt="Instagram Dark" class="w-6 h-6 hidden dark:block" />
-    </a>
-  
-    <!-- Facebook -->
-    <a href="#" target="_blank">
-      <img src="Assets/images/facebook.svg" alt="Facebook" class="w-6 h-6 block dark:hidden" />
-      <img src="Assets/images/facebook_dark.svg" alt="Facebook Dark" class="w-6 h-6 hidden dark:block" />
-    </a>
-  </div>
-  
-</div>
-
-
-
-</section>
-
-
-
-  
 
  <script src="Assets/js/main.js"></script>
 
