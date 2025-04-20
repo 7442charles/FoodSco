@@ -1,5 +1,17 @@
 # 🍽️ FoodSco
 
+## 📸 Screenshots
+
+### 🖥️ Desktop View Darktheme
+![Desktop Screenshot](Assets/images/FoodSco_darktheme_complete.png)
+
+### 🖥️ Desktop View lighttheme
+![Desktop Screenshot](Assets/images/FoodSco_lighttheme_complete.png)
+
+### 📱 Mobile View
+![Mobile Screenshot](screenshots/mobile-full.png)
+
+
 **FoodSco** is a simple, clean, and deliciously designed food website built using modern web standards with minimal dependencies. Our goal? Keep things stupid simple while delivering a visually pleasing and responsive experience for food lovers everywhere.
 
 ## 👨‍🍳 About the Project
