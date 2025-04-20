@@ -20,3 +20,37 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-15px); }
   }
+
+  @keyframes oscillate {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+  }
+
+  .oscillate-slow {
+    animation: oscillate 6s ease-in-out infinite;
+  }
+
+  .oscillate-medium {
+    animation: oscillate 4s ease-in-out infinite;
+  }
+
+  .oscillate-fast {
+    animation: oscillate 3s ease-in-out infinite;
+  }
+
+  @keyframes oscillate-reverse {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-25deg);
+    }
+  }
+  .oscillate-reverse {
+    animation: oscillate-reverse 5s ease-in-out infinite;
+  }
+  
