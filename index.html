@@ -43,6 +43,10 @@
   <!-- Tailwind Css -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Animation on scroll -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Custom Css -->
   <link rel="stylesheet" href="Assets/css/styles.css">
 
@@ -142,12 +146,11 @@
   <!-- Hero section -->
   <section class="w-full min-h-screen flex flex-col justify-between px-6 md:px-16 py-8 gap-8">
 
-
   <!-- Top: Main Hero Content (Left + Right) -->
-  <div class="flex flex-col md:flex-row gap-8 flex-grow">
+  <div class="flex flex-col md:flex-row gap-8 flex-grow" data-aos="fade-up" data-aos-duration="1000">
     
     <!-- Left Side -->
-    <div class="w-full md:w-1/2 flex flex-col justify-center gap-6">
+    <div class="w-full md:w-1/2 flex flex-col justify-center gap-6" data-aos="fade-right" data-aos-duration="1000">
       
       <!-- 1. Pill Button -->
       <div>
@@ -168,7 +171,7 @@
       </p>
 
       <!-- 4. CTA Buttons -->
-      <div class="flex gap-4 flex-wrap">
+      <div class="flex gap-4 flex-wrap" data-aos="zoom-in" data-aos-duration="1000">
         <button class="bg-[#FF7433] text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform">
           Order Now
         </button>
@@ -178,7 +181,7 @@
       </div>
 
       <!-- 👇 Mobile Only: Hero Image -->
-      <div class="block md:hidden flex items-center justify-center">
+      <div class="block md:hidden flex items-center justify-center animate-[float_4s_ease-in-out_infinite]">
         <img 
           src="Assets/images/hero_image_right.png" 
           alt="Delicious food" 
@@ -200,7 +203,7 @@
     </div>
 
     <!-- 👇 Desktop Only: Hero Image -->
-    <div class="hidden md:flex w-full md:w-1/2 items-center justify-center">
+    <div class="hidden md:flex w-full md:w-1/2 items-center justify-center animate-[float_4s_ease-in-out_infinite]">
       <img 
         id="main-hero-image"
         src="Assets/images/hero_image_right.png" 
@@ -765,6 +768,14 @@
 
 
  <script src="Assets/js/main.js"></script>
+  <script>
+    AOS.init({
+      once: true, // Animates only once when scrolled into view
+      duration: 800, // Animation duration in ms
+      easing: 'ease-in-out', // Easing function
+   });
+  
+  </script>
 
 </body>
 </html>
