@@ -58,6 +58,8 @@ async function fetchTestimonials() {
     select('#secondrow_cardtwo_name').innerHTML = selected[4].name;
     select('#secondrow_cardtwo_rank').innerHTML = selected[4].rank;
     select('#secondrow_cardtwo_img').src = selected[4].profilePic;
+    console.log(secondrow_cardone_img.src);
+    
 
 
 
