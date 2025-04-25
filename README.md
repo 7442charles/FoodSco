@@ -68,3 +68,12 @@ This is currently a personal project, but feel free to fork it or suggest improv
 ---
 
 
+## making the website dynamic
+
+
+- [FoodSco Google sheets](https://docs.google.com/spreadsheets/d/14ZjNEHUGvfNDQEb0QGNdK2AINFgg5h2sh-Y-1m2SAX4/edit?usp=sharing) - Google sheets
+ 
+
+I will be using the publish to web API trick so as to get the CSV as the data structure output.
+
+The link is -[API link](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4QcNOYmvwfZzjvEkJtOtvn8y16V_AOn3dzJwFaw_gU6NMvl_QNKOguuyvn_j1Z8_9NBgatUT7hzL4/pub?output=csv) 
